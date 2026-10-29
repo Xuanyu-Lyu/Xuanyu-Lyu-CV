@@ -81,15 +81,16 @@
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
 % Needed to deal hyperlink
-\RequirePackage[hidelinks,unicode, colorlinks=true, linkcolor=darkblue, urlcolor=darkblue]{hyperref}
+\RequirePackage[unicode, colorlinks=true, linkcolor=awesome, urlcolor=awesome]{hyperref}
+% Allow long URLs to break at any character, typeset in the body font
+\RequirePackage{xurl}
+\urlstyle{same}
 \hypersetup{%
   pdftitle={},
   pdfauthor={},
   pdfsubject={},
   pdfkeywords={}
 }
-\RequirePackage{xcolor}
-\definecolor{darkblue}{rgb}{0,0,0.5}
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -192,23 +193,23 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{28pt}{1em}\headerfontlight\color{black} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{28pt}{1em}\headerfont\bfseries\color{awesome-darkblue} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{darktext} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{30pt}{1em}\headerfontlight\color{darktext} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{30pt}{1em}\headerfont\bfseries\color{awesome} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{8.5pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{8.5pt}{1em}\headerfont\itshape\color{lighttext} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{awesome}\@sectioncolor #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{13pt}{1em}\bodyfont\scshape\bfseries\textcolor{awesome-darkblue2}{#1}}}
-\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{awesome}\@sectioncolor #1}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\bfseries\color{awesome} #1}}
+\newcommand*{\paragraphstyle}{\fontsize{9.5pt}{1.3em}\bodyfont\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{text} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\upshape\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1.2em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{9pt}{1.2em}\bodyfont\itshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{8.5pt}{1.2em}\bodyfont\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{8.5pt}{1.2em}\bodyfont\color{graytext} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1.25em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -218,15 +219,15 @@
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{text} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{text} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1.25em}\bodyfont\color{text} #1}}
+\newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{1.25em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{8.5pt}{1.25em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorlocationstyle}[1]{{\fontsize{8.5pt}{1.25em}\bodyfont\itshape\color{graytext} #1}}
 % For elements of skill
-\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
-\newcommand*{\skillsetstylex}[1]{{\fontsize{10pt}{1em}\bodyfont\color{darktext} #1}}
-\newcommand*{\skillsetstylep}[1]{{\fontsize{10pt}{1em}\bodyfont\color{darktext} #1}}
+\newcommand*{\skilltypestyle}[1]{{\fontsize{9pt}{1.25em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1.25em}\bodyfont\color{text} #1}}
+% For publications, talks and posters
+\newcommand*{\pubstyle}[1]{{\fontsize{9pt}{1.25em}\bodyfont\color{text} #1}}
 % For elements of the cover letter
 \newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
@@ -395,12 +396,15 @@
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
+\newcommand{\acvHeaderAfterSocialSkip}{2mm}
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{1mm}
-\newcommand{\acvSectionContentTopSkip}{1.3mm}
+\newcommand{\acvSectionTopSkip}{4.5mm}
+\newcommand{\acvSectionContentTopSkip}{1mm}
+\newcommand{\acvEntrySkip}{2mm}
+\newcommand{\acvItemSkip}{1.2mm}
+\newcommand{\acvLabelWidth}{4.2cm}
 
 
 %-------------------------------------------------------------------------------
@@ -410,6 +414,9 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% Top-aligned variants, so multi-line cells line up with their neighbours
+\newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{Q}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 % Use to draw horizontal line with specific thickness
 \def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
@@ -449,7 +456,7 @@
   }%
   \begin{minipage}[c]{\headerphotowidth}%
     \ifthenelse{\equal{\@photoalign}{left}}{\raggedright\drawphoto}{}
-  \end{minipage}
+  \end{minipage}%
   \begin{minipage}[c]{\headertextwidth}
     \ifthenelse{\equal{#1}{L}}{\raggedright}{\ifthenelse{\equal{#1}{R}}{\raggedleft}{\centering}}
     \headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
@@ -550,7 +557,7 @@
   \end{minipage}%
   \begin{minipage}[c]{\headerphotowidth}%
     \ifthenelse{\equal{\@photoalign}{right}}{\raggedleft\drawphoto}{}
-  \end{minipage}
+  \end{minipage}%
 }
 
 % Define a footer for CV
@@ -565,51 +572,47 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
-  \vspace{\acvSectionTopSkip}
-  \sectionstyle{#1}
-  \phantomsection
-  \color{gray}\vhrulefill{0.9pt}
+  \par\addvspace{\acvSectionTopSkip}%
+  {\setlength{\parskip}{0pt}\phantomsection
+  \noindent\sectionstyle{#1}\hspace{1.5ex}{\color{lightgray!60}\vhrulefill{0.6pt}}%
+  \par}\nobreak\vspace{\acvSectionContentTopSkip}%
 }
 
 % Define a subsection for CV
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-1mm}
-  \subsectionstyle{#1}
+  \par\addvspace{1ex}%
   \phantomsection
+  \noindent\subsectionstyle{#1}%
+  \par\nobreak
 }
 
 % Define a paragraph for CV
 \newenvironment{cvparagraph}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
-  \paragraphstyle
+  \par\paragraphstyle
 }{%
   \par
-  \vspace{2mm}
 }
 
 % Define an environment for cventry
-\newenvironment{cventries}{%
-  \vspace{\acvSectionContentTopSkip}
-  \begin{center}
-}{%
-  \end{center}
-}
+\newenvironment{cventries}{\par\setlength{\parskip}{0pt}}{\par}
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \ifempty{#2#3}
-      {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
-  \end{tabular*}%
+% Line 1: title (bold) and location; line 2: position (italic) and date.
+\newcommand{\cventry}[5]{%
+  \par\addvspace{\acvEntrySkip}%
+  {%
+    \setlength\tabcolsep{0pt}%
+    \setlength{\extrarowheight}{0pt}%
+    \noindent
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} P{\textwidth - 4.5cm} Q{4.5cm}}
+      \ifempty{#2#3}
+        {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+        {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+        \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+    \end{tabular*}\par
+  }%
+  \if\relax\detokenize{#5}\relax\else\descriptionstyle{#5}\par\fi
 }
 
 % Define an environment for cvsubentry
@@ -638,51 +641,42 @@
 
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
-  \begin{center}
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2cm} L{\textwidth - 5.5cm} R{2.5cm}}
+  \par\setlength{\parskip}{0pt}%
+  \setlength\tabcolsep{0pt}%
+  \setlength{\extrarowheight}{2pt}%
+  \noindent
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} P{2.2cm} P{\textwidth - 5.0cm} Q{2.8cm}}
 }{%
-    \end{tabular*}
-  \end{center}
+  \end{tabular*}\par
 }
 % Define a line of cv information(honor, award or something else)
-% Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
+% Usage: \cvhonor{<title>}{<date>}{<type>}
 \newcommand*{\cvhonor}[3]{%
-  \honordatestyle{#3} & \honortitlestyle{#1} &\honorlocationstyle{#2} \\
+  \honordatestyle{#2} & \honortitlestyle{#1} & \honorlocationstyle{#3} \\
 }
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
-  \begin{center}
-    \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+  \par\setlength{\parskip}{0pt}%
+  \setlength\tabcolsep{0pt}%
+  \setlength{\extrarowheight}{2pt}%
+  \noindent
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} P{\acvLabelWidth} P{\textwidth - \acvLabelWidth}}
 }{%
-    \end{tabular*}
-  \end{center}
+  \end{tabular*}\par
 }
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{%
-	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+  \skilltypestyle{#1} & \skillsetstyle{#2} \\
 }
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-4.0mm}
-  \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-    \setlength{\parskip}{0pt}
-    \renewcommand{\labelitemi}{\bullet}
+  \begin{itemize}[leftmargin=2.5ex, label={\textcolor{awesome}{\small\textbullet}}, nosep, topsep=1pt]
+    \setlength{\parskip}{0pt}%
 }{%
   \end{itemize}
-  \end{justify}
-  \vspace{-4.0mm}
 }
 
 
@@ -691,66 +685,42 @@
 %-------------------------------------------------------------------------------
 
 % Define an environment for cvpublication
+% A hanging-indent list; each \cvpublication is one item.
 \newenvironment{cvpublications}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-1mm}
-  \begin{center}
-}    %\setlength\tabcolsep{0pt}
-{    %\setlength{\extrarowheight}{0pt}
-  \end{center}
-}
-% Define a line of cv information(Puclication)
-% Usage: \Puclication{<type>}{<skillset>}
-\newcommand*{\cvpublication}[1]{
-    \vspace{-2mm}
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{justify}
-     {\skillsetstylep{#1}} 
-    \end{justify}
-}
-
-
-
-% Define an environment for cventry2
-\newenvironment{cventries2}{%
-  \vspace{\acvSectionContentTopSkip}
-  \begin{center}
+  \par\setlength{\parskip}{0pt}%
+  \begin{itemize}[leftmargin=2.5ex, label={\textcolor{awesome}{\small\textbullet}}, itemsep=0.6ex, parsep=0pt, topsep=0pt]
 }{%
-  \end{center}
+  \end{itemize}
 }
-% Define an entry of cv information
-% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+% Define a line of cv information(Publication)
+% Usage: \cvpublication{<citation>}
+\newcommand*{\cvpublication}[1]{%
+  \item \pubstyle{#1}
+}
+
+% Define an environment for cventry2 (talks, posters)
+\newenvironment{cventries2}{\par\setlength{\parskip}{0pt}}{\par}
+% Define an entry for a talk or poster
+% Usage: \cventryx{<event>}{<citation>}{<date>}{<location>}
+% Line 1: citation and date; line 2: event and location (italic).
 \newcommand*{\cventryx}[4]{%
-  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} L{\linewidth - 3.5cm} R{3.5cm}}
-    \ifempty{#2#3}
-      {\entrypositionstyle{#1} & \entrydatestyle{#4}}
-      {\skillsetstylex{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4}} \\
-    %\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
-  \end{tabular*}
+  \par\addvspace{\acvItemSkip}%
+  {%
+    \setlength\tabcolsep{0pt}%
+    \setlength{\extrarowheight}{0pt}%
+    \noindent
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} P{\textwidth - 2.6cm} Q{2.6cm}}
+      \pubstyle{#2} & \entrydatestyle{#3} \\
+      \entrypositionstyle{#1\ifempty{#4}{}{\,\textperiodcentered\,#4}} & \\
+    \end{tabular*}\par
+  }%
 }
 
 % Define an environment for Research Interests
-\newenvironment{interests}{%
-  \vspace{\acvSectionContentTopSkip}
-  \begin{center}
-}{%
-  \end{center}
-}
-% Define a line of cv information(skill)
-% Usage: \cvskill{<type>}{<skillset>}
-\newcommand*{\interest}[2]{%
-  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}
-  %\setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{\textwidth * \real{0.15}} L{\textwidth * \real{0.85}}}
-  {\skilltypestyle{#1}} & {\skillsetstylex{#2}}
-  \end{tabular*}
-}
+\newenvironment{interests}{\begin{cvskills}}{\end{cvskills}}
+% Define a line of research interests
+% Usage: \interest{<type>}{<topics>}
+\newcommand*{\interest}[2]{\cvskill{#1}{#2}}
 
 
 %-------------------------------------------------------------------------------
