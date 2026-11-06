@@ -404,7 +404,7 @@
 \newcommand{\acvSectionContentTopSkip}{1mm}
 \newcommand{\acvEntrySkip}{2mm}
 \newcommand{\acvItemSkip}{1.2mm}
-\newcommand{\acvLabelWidth}{4.2cm}
+\newcommand{\acvLabelWidth}{3.4cm}
 
 
 %-------------------------------------------------------------------------------
